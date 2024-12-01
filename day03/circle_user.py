@@ -2,7 +2,7 @@
 
 #circle_user.py
 
-# Run the script from the terminal: pass python circle_user.py
+# Run the script from the terminal: pass python file_name.py (for example, python circle_user.py) 
 
 import math
 import argparse
