@@ -1,27 +1,25 @@
-# circle_user.py
+# circle.py
 
+import math
 import argparse
 
 # Set up the argument parser
-parser = argparse.ArgumentParser(description="Calculate the area and circumference of a rectangle.")
+parser = argparse.ArgumentParser(description="Calculate the area and circumference of a circle.")
+parser.add_argument("radius", type=float, help="The radius of the circle")
 
-# Add arguments for width and length
-parser.add_argument("--width", type=float, required=True, help="The width of the rectangle")
-parser.add_argument("--length", type=float, required=True, help="The length of the rectangle")
-
-# Parse the command-line arguments
+# Parse the arguments
 args = parser.parse_args()
 
-# Get the width and length from the parsed arguments
-width = args.width
-length = args.length
+# Retrieve the radius
+radius = args.radius
 
 # Calculate the area
-area = width * length
+area = math.pi * radius ** 2
 
 # Calculate the circumference
-circumference = 2 * (width + length)
+circumference = 2 * math.pi * radius
 
 # Print out the results
-print("The area of the rectangle is:", area)
-print("The circumference of the rectangle is:", circumference)
+print("The area of the circle is:", area)
+print("The circumference of the circle is:", circumference)
+print("Done")
